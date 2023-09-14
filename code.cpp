@@ -4,6 +4,15 @@
 #include <math.h>
 #include <cstring>
 #include <fstream>
+void GetFloat(double n,int *result,int max_size){
+    double num = n;
+    double f = num-(int)num;
+    printf("%f\n",f);
+    for (int digit = 0;digit<max_size;digit++){
+        result[digit] = (int)(f*10);
+        f = f*10-(int)(f*10);
+    }
+}
 double max(double data[],int len){
     double max = data[0];
     for(int i = 0;i<len;i++){
@@ -229,9 +238,12 @@ int main(){
 
     }
     double average = sum(data,1024)/data_index;
+    printf("\n");
     double sd = sqrt((double)((m/(data_index))-average*average));
+    double error = sd/sqrt(data_index);
     printf("Average : %f\n",average);
     printf("Sandard deviation: %f\n",sd);
+    printf("A-class uncertainty: +-%f\n",error);
     int pr;
     while (1){
 	printf("Type p Number: ");
