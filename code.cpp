@@ -4,6 +4,9 @@
 #include <math.h>
 #include <cstring>
 #include <fstream>
+void openf(char* name){
+
+}
 void GetFloat(double n,int *result,int max_size){
     double num = n;
     double f = num-(int)num;
@@ -122,6 +125,7 @@ int main(){
     int times = -1;
     int ind = 0;
     memset(num,0,sizeof(num));
+    printf("                                  ,--,    \n                                ,--.'|    \n                                |  | :    \n                                :  : '    \n   ,---.     ,--.--.     ,---.  |  ' |    \n  /     \\   /       \\   /     \\ '  | |    \n /    / '  .--.  .-. | /    / ' |  | :    \n.    ' /    \\__\\/: . ..    ' /  '  : |__  \n'   ; :__   ,\" .--.; |'   ; :__ |  | '.'| \n'   | '.'| /  /  ,.  |'   | '.'|;  :    ; \n|   :    :;  :   .'   \\   :    :|  ,   /  \n \\   \\  / |  ,     .-./\\   \\  /  ---`-'   \n  `----'   `--`---'     `----'            \n");
     while (1){
         printf("Data(%d)",data_index+1);
         scanf("%s",num);
